@@ -102,7 +102,7 @@ class App extends Component {
       if (val.id !== id) {
         return val;
       }
-      alert(id);
+      alert('Profile Deleted');
     });
     console.log('filter array', filterArray);
     this.setState({data: filterArray});
@@ -178,14 +178,14 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 8,
   },
-  ViewStyle: {
-    backgroundColor: '#037272',
-    padding: 10,
-    borderRadius: 8,
-    width: 60,
-    height: 40,
-    alignItems: 'center',
-  },
+  //ViewStyle: {
+  // backgroundColor: '#037272',
+  // padding: 10,
+  //borderRadius: 8,
+  //width: 60,
+  // height: 40,
+  // alignItems: 'center',
+  // },
 });
 
 export default App;
