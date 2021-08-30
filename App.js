@@ -17,7 +17,7 @@ class App extends Component {
         id: 1,
         name: 'Visal',
         subject: 'Database',
-        Age: '25',
+        Age: 'Age: 25',
         image:
           'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
@@ -25,7 +25,7 @@ class App extends Component {
         id: 2,
         name: 'Jonny',
         subject: 'AI',
-        Age: '30',
+        Age: 'Age: 30',
         image:
           'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       },
@@ -33,7 +33,7 @@ class App extends Component {
         id: 3,
         name: 'Harana',
         subject: 'React js',
-        Age: '20',
+        Age: 'Age: 20',
         image:
           'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
@@ -41,7 +41,7 @@ class App extends Component {
         id: 4,
         name: 'Vinsey',
         subject: 'React Native',
-        Age: '22',
+        Age: 'Age: 22',
         image:
           'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
@@ -49,17 +49,49 @@ class App extends Component {
         id: 5,
         name: 'Sammol',
         subject: 'Management',
-        Age: '22',
+        Age: 'Age: 22',
         image:
-          'https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+          'https://images.unsplash.com/photo-1556157382-97eda2d62296?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
       },
       {
         id: 6,
         name: 'Jame',
-        subject: 'AI',
-        Age: '25',
+        subject: 'Java',
+        Age: 'Age: 25',
         image:
           'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+      },
+      {
+        id: 7,
+        name: 'Wunshchen',
+        subject: 'PHP',
+        Age: 'Age: 22',
+        image:
+          'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+      },
+      {
+        id: 8,
+        name: 'Alyson',
+        subject: 'Data Analysis',
+        Age: 'Age: 30',
+        image:
+          'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+      },
+      {
+        id: 9,
+        name: 'Angeline Rice',
+        subject: 'Network',
+        Age: 'Age: 21',
+        image:
+          'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80',
+      },
+      {
+        id: 10,
+        name: 'Deon Wusch',
+        subject: 'PhotoShop',
+        Age: 'Age: 25',
+        image:
+          'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fHByb2ZpbGV8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=600',
       },
     ],
   };
@@ -89,7 +121,7 @@ class App extends Component {
         </View>
 
         <TouchableOpacity
-          style={styles.btnStyle}
+          style={styles.DeleteStyle}
           onPress={() => this.onDelete(item.id)}>
           <Text style={{color: 'white'}}>Delete</Text>
         </TouchableOpacity>
@@ -100,7 +132,8 @@ class App extends Component {
   render() {
     const {data} = this.state;
     return (
-      <View style={styles.cntainer}>
+      <View style={styles.container}>
+        <Text style={styles.Text}>Profiles Information</Text>
         <FlatList
           data={data}
           renderItem={this.renderItems}
@@ -114,7 +147,17 @@ class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 24,
+    padding: 20,
+  },
+  Text: {
+    height: 40,
+    textAlign: 'center',
+    borderRadius: 50,
+    fontWeight: 'bold',
+    borderBottomWidth: 2,
+    borderBottomColor: 'grey',
+    padding: 10,
+    backgroundColor: '#c0cbc0',
   },
   FlatlistStyle: {
     flexDirection: 'row',
@@ -123,16 +166,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#c0cbc0',
     marginBottom: 16,
     padding: 8,
+    borderRadius: 8,
   },
   imgStyle: {
     width: 80,
     height: 80,
     borderRadius: 40,
   },
-  btnStyle: {
+  DeleteStyle: {
     backgroundColor: '#037272',
     padding: 10,
     borderRadius: 8,
+  },
+  ViewStyle: {
+    backgroundColor: '#037272',
+    padding: 10,
+    borderRadius: 8,
+    width: 60,
+    height: 40,
+    alignItems: 'center',
   },
 });
 
