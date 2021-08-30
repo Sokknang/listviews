@@ -17,49 +17,49 @@ class App extends Component {
         id: 1,
         name: 'Visal',
         subject: 'Database',
-        Age: '21',
+        Age: '25',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8gYefjK45EqzPI4eHBNAuDmnitPJP617Ng&usqp=CAU',
+          'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
       {
         id: 2,
-        name: 'Vibol',
+        name: 'Jonny',
         subject: 'AI',
-        Age: '21',
+        Age: '30',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8gYefjK45EqzPI4eHBNAuDmnitPJP617Ng&usqp=CAU',
+          'https://images.pexels.com/photos/697509/pexels-photo-697509.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       },
       {
         id: 3,
-        name: 'Srey Nich',
+        name: 'Harana',
         subject: 'React js',
         Age: '20',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8gYefjK45EqzPI4eHBNAuDmnitPJP617Ng&usqp=CAU',
+          'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
       {
         id: 4,
-        name: 'Dara',
+        name: 'Vinsey',
         subject: 'React Native',
-        Age: '20',
+        Age: '22',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8gYefjK45EqzPI4eHBNAuDmnitPJP617Ng&usqp=CAU',
+          'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
       {
         id: 5,
-        name: 'Chhay Lang',
+        name: 'Sammol',
         subject: 'Management',
         Age: '22',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8gYefjK45EqzPI4eHBNAuDmnitPJP617Ng&usqp=CAU',
+          'https://images.pexels.com/photos/6626903/pexels-photo-6626903.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
       {
         id: 6,
-        name: 'bottra',
+        name: 'Jame',
         subject: 'AI',
-        Age: '22',
+        Age: '25',
         image:
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO8gYefjK45EqzPI4eHBNAuDmnitPJP617Ng&usqp=CAU',
+          'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
       },
     ],
   };
