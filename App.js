@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
 import {ConsoleWriter} from 'istanbul-lib-report';
 import React, {Component} from 'react';
@@ -96,6 +97,10 @@ class App extends Component {
     ],
   };
 
+  onView = id => {
+    const {data} = this.state;
+  };
+
   onDelete = id => {
     const {data} = this.state;
     let filterArray = data.filter((val, i) => {
@@ -113,12 +118,18 @@ class App extends Component {
       <View style={styles.FlatlistStyle}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
           <Image source={{uri: item.image}} style={styles.imgStyle} />
-          <View style={{marginLeft: 8}}>
+          <View style={styles.info}>
             <Text>{item.name}</Text>
             <Text>{item.subject}</Text>
             <Text>{item.Age}</Text>
           </View>
         </View>
+
+        <TouchableOpacity
+          style={styles.ViewStyle}
+          onPress={() => this.onView(item.id)}>
+          <Text style={{color: 'white'}}>View</Text>
+        </TouchableOpacity>
 
         <TouchableOpacity
           style={styles.DeleteStyle}
@@ -161,12 +172,16 @@ const styles = StyleSheet.create({
   },
   FlatlistStyle: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
     alignItems: 'center',
+    justifyContent: 'space-between',
     backgroundColor: '#c0cbc0',
     marginBottom: 16,
     padding: 8,
     borderRadius: 8,
+  },
+  info: {
+    flex: 0.5,
+    marginLeft: 8,
   },
   imgStyle: {
     width: 80,
@@ -177,15 +192,17 @@ const styles = StyleSheet.create({
     backgroundColor: '#037272',
     padding: 10,
     borderRadius: 8,
+    flexDirection: 'row',
   },
-  //ViewStyle: {
-  // backgroundColor: '#037272',
-  // padding: 10,
-  //borderRadius: 8,
-  //width: 60,
-  // height: 40,
-  // alignItems: 'center',
-  // },
+  ViewStyle: {
+    backgroundColor: '#037272',
+    padding: 10,
+    borderRadius: 8,
+    width: 60,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+  },
 });
 
 export default App;
